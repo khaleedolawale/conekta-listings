@@ -2,7 +2,7 @@
 
 A responsive, mobile-first property listing page built for the Conekta Practical Experience Programme front-end assessment.
 
-**Live site:** `ADD-LIVE-LINK-HERE`
+**Live site:** https://khaleedolawale.github.io/conekta-listings/
 
 ## What it does
 
@@ -20,7 +20,7 @@ Plain HTML, CSS and JavaScript. No frameworks, no build step, no paid tools or a
 
 1. Clone the repository:
    ```
-   git clone ADD-REPO-LINK-HERE
+   git clone https://github.com/khaleedolawale/conekta-listings.git
    cd conekta-listings
    ```
 2. Open `index.html` in any modern browser.
