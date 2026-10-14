@@ -69,4 +69,4 @@ notes/guide.html  My study notes explaining every part of the code
 
 ## AI and tools disclosure
 
-I used Claude (Anthropic) to help draft the HTML, CSS and JavaScript and to write the study guide in `notes/guide.html`. I reviewed, tested and edited the output, and I can explain every part of it. I also used MDN Web Docs for reference. All property data is invented sample content.
+I used Claude (Anthropic) to help draft the HTML, CSS and JavaScript and to write the study guide in `notes/guide.html`. I reviewed and tested the output, and I can explain every part of it. All property data is invented sample content.
