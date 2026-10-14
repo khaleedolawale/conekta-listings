@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conekta | Verified Rental Listings</title>
+  <meta name="description" content="Browse verified rental properties in Lagos. Search by area, filter by price and bedrooms.">
+</head>
+<body>
+  <a class="skip-link" href="#listings">Skip to listings</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./">Conekta</a>
+      <form class="search" id="search-form" role="search">
+        <label class="visually-hidden" for="search-input">Search properties by area or keyword</label>
+        <input class="search-input" id="search-input" type="search" placeholder="Search area or property, e.g. Lekki" autocomplete="off">
+        <button class="btn btn-search" type="submit">Search</button>
+      </form>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="intro">
+        <h1>Verified rentals in Lagos</h1>
+        <p>Browse homes that have been checked before they go live.</p>
+      </section>
+
+      <section class="filters" aria-labelledby="filters-heading">
+        <h2 class="visually-hidden" id="filters-heading">Filter properties</h2>
+
+        <div class="filter-group" role="group" aria-labelledby="label-location">
+          <span class="filter-label" id="label-location">Location</span>
+          <div class="chips">
+            <button class="chip" type="button" data-filter="location" data-value="all" aria-pressed="true">All areas</button>
+            <button class="chip" type="button" data-filter="location" data-value="lekki" aria-pressed="false">Lekki</button>
+            <button class="chip" type="button" data-filter="location" data-value="yaba" aria-pressed="false">Yaba</button>
+            <button class="chip" type="button" data-filter="location" data-value="ikeja" aria-pressed="false">Ikeja</button>
+            <button class="chip" type="button" data-filter="location" data-value="surulere" aria-pressed="false">Surulere</button>
+            <button class="chip" type="button" data-filter="location" data-value="ajah" aria-pressed="false">Ajah</button>
+          </div>
+        </div>
+
+        <div class="filter-group" role="group" aria-labelledby="label-price">
+          <span class="filter-label" id="label-price">Price per year</span>
+          <div class="chips">
+            <button class="chip" type="button" data-filter="price" data-value="all" aria-pressed="true">Any price</button>
+            <button class="chip" type="button" data-filter="price" data-value="under" aria-pressed="false">Under ₦1.5m</button>
+            <button class="chip" type="button" data-filter="price" data-value="mid" aria-pressed="false">₦1.5m to ₦3m</button>
+            <button class="chip" type="button" data-filter="price" data-value="over" aria-pressed="false">Over ₦3m</button>
+          </div>
+        </div>
+
+        <div class="filter-group" role="group" aria-labelledby="label-bedrooms">
+          <span class="filter-label" id="label-bedrooms">Bedrooms</span>
+          <div class="chips">
+            <button class="chip" type="button" data-filter="bedrooms" data-value="all" aria-pressed="true">Any</button>
+            <button class="chip" type="button" data-filter="bedrooms" data-value="1" aria-pressed="false">1 bed</button>
+            <button class="chip" type="button" data-filter="bedrooms" data-value="2" aria-pressed="false">2 beds</button>
+            <button class="chip" type="button" data-filter="bedrooms" data-value="3" aria-pressed="false">3 beds</button>
+            <button class="chip" type="button" data-filter="bedrooms" data-value="4" aria-pressed="false">4+ beds</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="results" aria-labelledby="results-heading">
+        <h2 class="visually-hidden" id="results-heading">Properties</h2>
+        <p class="result-count" id="result-count" role="status">12 properties found</p>
+        <p class="empty-state" id="empty-state" hidden>
+          No properties match your search.
+          <button class="link-button" id="reset-filters" type="button">Clear all filters</button>
+        </p>
+
+        <ul class="grid" id="listings">
+          <li class="listing" data-location="lekki" data-price="4500000" data-bedrooms="2">
+            <article class="card">
+              <div class="card-media">
+                <div class="card-image" role="img" aria-label="Photo placeholder for Modern 2 Bedroom Flat in Lekki Phase 1"><span>Photo coming soon</span></div>
+                <span class="badge"><span aria-hidden="true">✓</span> Verified</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Modern 2 Bedroom Flat</h3>
+                <p class="card-area">Lekki Phase 1, Lagos</p>
+                <p class="card-meta">2 bedrooms</p>
+                <p class="card-price"><span class="visually-hidden">Price: </span>₦4,500,000 <span class="card-price-unit">per year</span></p>
+                <button class="btn btn-details" type="button" aria-label="View details for Modern 2 Bedroom Flat in Lekki Phase 1">View details</button>
+              </div>
+            </article>
+          </li>
+
+          <li class="listing" data-location="yaba" data-price="1200000" data-bedrooms="1">
+            <article class="card">
+              <div class="card-media">
+                <div class="card-image" role="img" aria-label="Photo placeholder for Student Friendly Mini Flat in Yaba"><span>Photo coming soon</span></div>
+                <span class="badge"><span aria-hidden="true">✓</span> Verified</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Student Friendly Mini Flat</h3>
+                <p class="card-area">Sabo, Yaba, Lagos</p>
+                <p class="card-meta">1 bedroom</p>
+                <p class="card-price"><span class="visually-hidden">Price: </span>₦1,200,000 <span class="card-price-unit">per year</span></p>
+                <button class="btn btn-details" type="button" aria-label="View details for Student Friendly Mini Flat in Sabo, Yaba">View details</button>
+              </div>
+            </article>
+          </li>
+
+          <li class="listing" data-location="ikeja" data-price="3800000" data-bedrooms="3">
+            <article class="card">
+              <div class="card-media">
+                <div class="card-image" role="img" aria-label="Photo placeholder for Spacious 3 Bedroom Apartment in GRA Ikeja"><span>Photo coming soon</span></div>
+                <span class="badge"><span aria-hidden="true">✓</span> Verified</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Spacious 3 Bedroom Apartment</h3>
+                <p class="card-area">GRA, Ikeja, Lagos</p>
+                <p class="card-meta">3 bedrooms</p>
+                <p class="card-price"><span class="visually-hidden">Price: </span>₦3,800,000 <span class="card-price-unit">per year</span></p>
+                <button class="btn btn-details" type="button" aria-label="View details for Spacious 3 Bedroom Apartment in GRA, Ikeja">View details</button>
+              </div>
+            </article>
+          </li>
+
+          <li class="listing" data-location="surulere" data-price="1800000" data-bedrooms="2">
+            <article class="card">
+              <div class="card-media">
+                <div class="card-image" role="img" aria-label="Photo placeholder for Neat 2 Bedroom Flat in Surulere"><span>Photo coming soon</span></div>
+                <span class="badge"><span aria-hidden="true">✓</span> Verified</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Neat 2 Bedroom Flat</h3>
+                <p class="card-area">Adeniran Ogunsanya, Surulere, Lagos</p>
+                <p class="card-meta">2 bedrooms</p>
+                <p class="card-price"><span class="visually-hidden">Price: </span>₦1,800,000 <span class="card-price-unit">per year</span></p>
+                <button class="btn btn-details" type="button" aria-label="View details for Neat 2 Bedroom Flat in Surulere">View details</button>
+              </div>
+            </article>
+          </li>
+
+          <li class="listing" data-location="ajah" data-price="1400000" data-bedrooms="1">
+            <article class="card">
+              <div class="card-media">
+                <div class="card-image" role="img" aria-label="Photo placeholder for Cozy Self Contained Studio in Sangotedo, Ajah"><span>Photo coming soon</span></div>
+                <span class="badge"><span aria-hidden="true">✓</span> Verified</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Cozy Self Contained Studio</h3>
+                <p class="card-area">Sangotedo, Ajah, Lagos</p>
+                <p class="card-meta">1 bedroom</p>
+                <p class="card-price"><span class="visually-hidden">Price: </span>₦1,400,000 <span class="card-price-unit">per year</span></p>
+                <button class="btn btn-details" type="button" aria-label="View details for Cozy Self Contained Studio in Sangotedo, Ajah">View details</button>
+              </div>
+            </article>
+          </li>
+
+          <li class="listing" data-location="lekki" data-price="8500000" data-bedrooms="4">
+            <article class="card">
+              <div class="card-media">
+                <div class="card-image" role="img" aria-label="Photo placeholder for Luxury 4 Bedroom Duplex in Ikate, Lekki"><span>Photo coming soon</span></div>
+                <span class="badge"><span aria-hidden="true">✓</span> Verified</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Luxury 4 Bedroom Duplex</h3>
+                <p class="card-area">Ikate, Lekki, Lagos</p>
+                <p class="card-meta">4 bedrooms</p>
+                <p class="card-price"><span class="visually-hidden">Price: </span>₦8,500,000 <span class="card-price-unit">per year</span></p>
+                <button class="btn btn-details" type="button" aria-label="View details for Luxury 4 Bedroom Duplex in Ikate, Lekki">View details</button>
+              </div>
+            </article>
+          </li>
+
+          <li class="listing" data-location="yaba" data-price="2200000" data-bedrooms="2">
+            <article class="card">
+              <div class="card-media">
+                <div class="card-image" role="img" aria-label="Photo placeholder for Renovated 2 Bedroom Flat in Yaba"><span>Photo coming soon</span></div>
+                <span class="badge"><span aria-hidden="true">✓</span> Verified</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Renovated 2 Bedroom Flat</h3>
+                <p class="card-area">Alagomeji, Yaba, Lagos</p>
+                <p class="card-meta">2 bedrooms</p>
+                <p class="card-price"><span class="visually-hidden">Price: </span>₦2,200,000 <span class="card-price-unit">per year</span></p>
+                <button class="btn btn-details" type="button" aria-label="View details for Renovated 2 Bedroom Flat in Alagomeji, Yaba">View details</button>
+              </div>
+            </article>
+          </li>
+
+          <li class="listing" data-location="ikeja" data-price="1300000" data-bedrooms="1">
+            <article class="card">
+              <div class="card-media">
+                <div class="card-image" role="img" aria-label="Photo placeholder for Budget 1 Bedroom Flat in Allen, Ikeja"><span>Photo coming soon</span></div>
+                <span class="badge"><span aria-hidden="true">✓</span> Verified</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Budget 1 Bedroom Flat</h3>
+                <p class="card-area">Allen Avenue, Ikeja, Lagos</p>
+                <p class="card-meta">1 bedroom</p>
+                <p class="card-price"><span class="visually-hidden">Price: </span>₦1,300,000 <span class="card-price-unit">per year</span></p>
+                <button class="btn btn-details" type="button" aria-label="View details for Budget 1 Bedroom Flat in Allen Avenue, Ikeja">View details</button>
+              </div>
+            </article>
+          </li>
+
+          <li class="listing" data-location="surulere" data-price="2800000" data-bedrooms="3">
+            <article class="card">
+              <div class="card-media">
+                <div class="card-image" role="img" aria-label="Photo placeholder for Family 3 Bedroom Bungalow in Aguda, Surulere"><span>Photo coming soon</span></div>
+                <span class="badge"><span aria-hidden="true">✓</span> Verified</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Family 3 Bedroom Bungalow</h3>
+                <p class="card-area">Aguda, Surulere, Lagos</p>
+                <p class="card-meta">3 bedrooms</p>
+                <p class="card-price"><span class="visually-hidden">Price: </span>₦2,800,000 <span class="card-price-unit">per year</span></p>
+                <button class="btn btn-details" type="button" aria-label="View details for Family 3 Bedroom Bungalow in Aguda, Surulere">View details</button>
+              </div>
+            </article>
+          </li>
+
+          <li class="listing" data-location="ajah" data-price="2000000" data-bedrooms="2">
+            <article class="card">
+              <div class="card-media">
+                <div class="card-image" role="img" aria-label="Photo placeholder for Serviced 2 Bedroom Flat in Abraham Adesanya, Ajah"><span>Photo coming soon</span></div>
+                <span class="badge"><span aria-hidden="true">✓</span> Verified</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Serviced 2 Bedroom Flat</h3>
+                <p class="card-area">Abraham Adesanya, Ajah, Lagos</p>
+                <p class="card-meta">2 bedrooms</p>
+                <p class="card-price"><span class="visually-hidden">Price: </span>₦2,000,000 <span class="card-price-unit">per year</span></p>
+                <button class="btn btn-details" type="button" aria-label="View details for Serviced 2 Bedroom Flat in Abraham Adesanya, Ajah">View details</button>
+              </div>
+            </article>
+          </li>
+
+          <li class="listing" data-location="lekki" data-price="2500000" data-bedrooms="1">
+            <article class="card">
+              <div class="card-media">
+                <div class="card-image" role="img" aria-label="Photo placeholder for Furnished Mini Flat in Oniru, Lekki"><span>Photo coming soon</span></div>
+                <span class="badge"><span aria-hidden="true">✓</span> Verified</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Furnished Mini Flat</h3>
+                <p class="card-area">Oniru, Lekki, Lagos</p>
+                <p class="card-meta">1 bedroom</p>
+                <p class="card-price"><span class="visually-hidden">Price: </span>₦2,500,000 <span class="card-price-unit">per year</span></p>
+                <button class="btn btn-details" type="button" aria-label="View details for Furnished Mini Flat in Oniru, Lekki">View details</button>
+              </div>
+            </article>
+          </li>
+
+          <li class="listing" data-location="ikeja" data-price="6000000" data-bedrooms="4">
+            <article class="card">
+              <div class="card-media">
+                <div class="card-image" role="img" aria-label="Photo placeholder for Executive 4 Bedroom Terrace in Maryland, Ikeja"><span>Photo coming soon</span></div>
+                <span class="badge"><span aria-hidden="true">✓</span> Verified</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Executive 4 Bedroom Terrace</h3>
+                <p class="card-area">Maryland, Ikeja, Lagos</p>
+                <p class="card-meta">4 bedrooms</p>
+                <p class="card-price"><span class="visually-hidden">Price: </span>₦6,000,000 <span class="card-price-unit">per year</span></p>
+                <button class="btn btn-details" type="button" aria-label="View details for Executive 4 Bedroom Terrace in Maryland, Ikeja">View details</button>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Sample listings created for a skills assessment. No real properties, people or companies.</p>
+    </div>
+  </footer>
+</body>
+</html>
